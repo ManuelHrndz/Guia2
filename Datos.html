@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE>Ejemplo de Formualarios</TITLE>
+<link rel="stylesheet" type="text/css" href="css/EstiloFor.css">
+<STYLE type="text/css">
+BODY {background-color:#008080; color:#FF7F003; font-size:40pm
+H1 {text-align:center;}
+P {text-align:center; font-size:16pt;}
+</STYLE>
+</HEAD>
+<BODY>
+<div id="stylized" class="myform">
+<form id="form" name="form" method="post" action="enviado.html">
+<h1>Formulario de Registro</h1>
+<p>Llenar los siguientes campos: </p>
+<label><b>Nombre: </b>
+<span class="small">Agregue su nombre</span>
+</label>
+<input type="text" name="name" id="name" />
+<label><b>Año de nacimiento: </b>
+<span class="small">Seleccione su año de nacimiento</s>
+</label>
+<input type="number" name="nacido" min="1900" />
+<label>Email
+<span class="small">Agregue un email válido</span>
+</label>
+<input type="text" name="email" id="email" />
+<label><b>Password</b>
+<span class="small">Min. 6 caracteres </span>
+</label>
+<input type="password" name="password" id="password" />
+<button type="submit">Enviar datos</button>
+<div class="spacer"></div>
+</form>
+</div>
+</BODY>
+</HTML>

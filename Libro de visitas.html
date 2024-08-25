@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Formularios</title>
+    <link rel="stylesheet" type="text/css" href="css/EstiloFor.css">
+    <style type="text/css">
+        body {
+            background-color: #f5f5dc;
+            color: #FF7F00;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            gap: 20px; 
+        }
+        #stylized {
+            background-color: #ffffff; 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 500px; 
+        }
+        .additional-block {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            width: 200px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #ffffff; 
+        }
+        h1 {
+            text-align: left;
+        }
+        h3, h4 {
+            margin: 10px 0;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="file"],
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-bottom: 10px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #FF7F00;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 48%;
+            font-size: 16px;
+            margin-right: 4%;
+        }
+        input[type="submit"] {
+            background-color: #28a745; 
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        input[type="reset"] {
+            background-color: #FF7F00;
+        }
+        input[type="reset"]:hover {
+            background-color: #ff6f00;
+        }
+        .additional-block label {
+            margin: 5px 0;
+        }
+        .additional-block input {
+            margin-right: 5px;
+        }
+        
+        input[type="text"] {
+            max-width: 100%;
+        }
+        input[type="password"] {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="stylized" class="myform">
+            <form id="form" name="miformulario" action="mailto:alguien@gmail.com" method="post" enctype="multipart/form-data" onsubmit="return enviarCorreo()">
+                <h1 style="text-align: left;">Libro de visitas!</h1><br>
+
+                <h3>Datos personales</h3>
+                <label>Nombre:</label>
+                <input type="text" name="nombre" id="name" required /><br><br>
+                <label>Apellido:</label>
+                <input type="text" name="apellido" id="apellido" required /><br><br>
+                <h4>Indica un pseudónimo y una contraseña</h4>
+                <label>Pseudónimo:</label>
+                <input type="text" name="pseudonimo" id="pseudonimo" maxlength="16" required />
+                <label>Contraseña:</label>
+                <input type="password" name="contrasena" id="password" maxlength="12" required /><br><br>
+
+                <section>
+                    <label><b>Otros datos:</b></label><br>
+                    <label>Edad</label><br>
+                    <input type="radio" name="edad" value="0-10" checked><b>0 - 10</b><br>
+                    <input type="radio" name="edad" value="11-20"><b>11 - 20</b><br>
+                    <input type="radio" name="edad" value="21-30"><b>21 - 30</b><br>
+                    <input type="radio" name="edad" value="31-40"><b>31 - 40</b><br>
+                    <input type="radio" name="edad" value="41-plus"><b>41 - más</b><br><br>
+                </section>
+                
+                <input type="submit" value="Enviar" />
+                <input type="reset" value="Borrar"/>
+            </form>
+        </div>
+
+        <div class="additional-block">
+            <label><b>¿Dónde vives?</b></label><br>
+            <input type="radio" name="ubicacion" value="palma" checked><b>Palma de Mallorca</b><br>
+            <input type="radio" name="ubicacion" value="part-forana"><b>Part forana de Mallorca</b><br>
+            <input type="radio" name="ubicacion" value="menorca"><b>Menorca</b><br>
+            <input type="radio" name="ubicacion" value="eivissa-formentera"><b>Eivissa o Formentera</b><br>
+            <input type="radio" name="ubicacion" value="otros"><b>Otros</b><br><br>
+        </div>
+
+        <div class="additional-block">
+            <label><b>Intereses</b></label><br>
+            <input type="checkbox" name="interes" value="musica" checked><b>Musica</b><br>
+            <input type="checkbox" name="interes" value="deportes"><b>Deportes</b><br>
+            <input type="checkbox" name="interes" value="pintura"><b>Pintura</b><br>
+            <input type="checkbox" name="interes" value="lectura"><b>Lectura</b><br>
+            <input type="checkbox" name="interes" value="otras"><b>Otras</b><br><br>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function enviarCorreo() {
+            return true; // Permiteel envío del formulario
+        }
+    </script>
+</body>
+</html>
+
+

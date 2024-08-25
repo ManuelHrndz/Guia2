@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla 5x5</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #E6F3FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            background-color: #FFFFCC;
+        }
+        tbody td {
+            transition: background-color 0.3s ease;
+        }
+        tbody td:hover {
+            background-color: #FFFF66;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><b>Nombre de producto</b></th>
+                <th><b>Venta semana 1</b></th>
+                <th><b>Venta semana 2</b></th>
+                <th><b>Venta semana 3</b></th>
+                <th><b>Venta semana 4</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="highlight">
+                <td bgcolor="#D3D3D3"><b>Pastas</b></td>
+                <td>125.89</td>
+                <td>159.78</td>
+                <td>130.56</td>
+                <td>116.57</td>
+            </tr>
+            <tr>
+                <td bgcolor="#D3D3D3"><b>Detergente</b></td>
+                <td>67.45</td>
+                <td>78.56</td>
+                <td>90.56</td>
+                <td>69.34</td>
+            </tr>
+            <tr class="highlight">
+                <td bgcolor="#D3D3D3"><b>Sopas</b></td>
+                <td>45.67</td>
+                <td>34.45</td>
+                <td>45.89</td>
+                <td>67.80</td>
+            </tr>
+            <tr>
+                <td bgcolor="#D3D3D3"><b>Especies</b></td>
+                <td>17.56</td>
+                <td>18.67</td>
+                <td>15.89</td>
+                <td>13.23</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
